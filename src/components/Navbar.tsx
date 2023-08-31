@@ -80,10 +80,10 @@ export function Navbar() {
             <a href="#" className={classes.link}>
               Home
             </a>
-            <a href="#" className={classes.link}>
+            <a href="About" className={classes.link}>
               About
             </a>
-            <a href="#" className={classes.link}>
+            <a href="Contact" className={classes.link}>
               Contact
             </a>
           </Group>
