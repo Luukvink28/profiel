@@ -10,26 +10,26 @@ import {
     Container,
     rem,
   } from '@mantine/core';
-  import { IconGauge, IconUser, IconCookie } from '@tabler/icons-react';
+  import { IconBallBasketball, IconCamera, IconDeviceGamepad2 } from '@tabler/icons-react';
   
   const mockdata = [
     {
       title: 'Basketball',
       description:
         'Basketballen',
-      icon: IconGauge,
+      icon: IconBallBasketball,
     },
     {
       title: 'Fotografie',
       description:
-        'fotos maken',
-      icon: IconUser,
+        'Basketbalfotografie is mijn hobby. Ik jaag op de meest dynamische momenten, gevangen in licht en schaduw. Zo breng ik de energie van het spel tot leven en deel ik mijn passie voor basketbal.',
+      icon: IconCamera,
     },
     {
       title: 'Gaming',
       description:
-        'Gamen',
-      icon: IconCookie,
+        'Gamen is mijn hobby. Ik geniet van spannende avonturen in virtuele werelden en deel de vreugde van het spel en mijn game-passie met anderen.',
+      icon: IconDeviceGamepad2,
     },
   ];
   
@@ -96,7 +96,7 @@ import {
     
   
         <Title order={2} className={classes.title} ta="center" mt="sm">
-          Wat ik doe in mijn dagelijiks leven
+          Wat ik doe in mijn dagelijks leven
         </Title>
   
         <Text c="dimmed" className={classes.description} ta="center" mt="md" pt="sm">

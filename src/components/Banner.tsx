@@ -69,9 +69,9 @@ export function Banner() {
   return (
     <div className={classes.wrapper}>
       <div className={classes.body}>
-        <Title className={classes.title}>Wait a minute...</Title>
+        <Title className={classes.title}>Luuk Vink</Title>
         <Text fw={500} fz="lg" mb={5}>
-          Subscribe to our newsletter!
+          Student Grafish Lyceum Rotterdam - Software Developer
         </Text>
         <Text fz="sm" c="dimmed">
           You will never miss important product updates, latest news and community QA sessions. Our

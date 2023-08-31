@@ -1,4 +1,5 @@
 import { createStyles, Container, Group, ActionIcon, rem } from '@mantine/core';
+import Link from 'next/link';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
@@ -36,13 +37,19 @@ export function Footer() {
       <Container className={classes.inner}>
         <Group spacing={0} className={classes.links} position="right" noWrap>
           <ActionIcon size="lg">
-            <IconBrandTwitter size="1.05rem" stroke={1.5} />
+            <Link href="https://twitter.com/Luuk421" style={{ textDecoration: 'none' }}>
+            <IconBrandTwitter color='black' size="1.05rem" stroke={1.5} />
+            </Link>
           </ActionIcon>
           <ActionIcon size="lg">
-            <IconBrandYoutube size="1.05rem" stroke={1.5} />
+            <Link href="https://www.youtube.com/channel/UC9wltPLhLxAxYVRqvm1rMmA" style={{ textDecoration: 'none' }}>
+            <IconBrandYoutube color='black' size="1.05rem" stroke={1.5} />
+            </Link>
           </ActionIcon>
           <ActionIcon size="lg">
-            <IconBrandInstagram size="1.05rem" stroke={1.5} />
+            <Link href='https://www.instagram.com/luuk._vk/' style={{ textDecoration: 'none' }}>
+            <IconBrandInstagram color='black'  size="1.05rem" stroke={1.5} />
+            </Link>
           </ActionIcon>
         </Group>
       </Container>
