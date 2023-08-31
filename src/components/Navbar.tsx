@@ -22,6 +22,7 @@ const useStyles = createStyles((theme) => ({
     textDecoration: 'none',
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     fontWeight: 500,
+    fontstyle: 'arial',
     fontSize: theme.fontSizes.sm,
 
     [theme.fn.smallerThan('sm')]: {
@@ -77,13 +78,13 @@ export function Navbar() {
           </div>
 
           <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
-            <a href="#" className={classes.link}>
+            <a href="/" className={classes.link}>
               Home
             </a>
-            <a href="About" className={classes.link}>
+            <a href="/about" className={classes.link}>
               About
             </a>
-            <a href="Contact" className={classes.link}>
+            <a href="/contact" className={classes.link}>
               Contact
             </a>
           </Group>
@@ -97,21 +98,21 @@ export function Navbar() {
         onClose={closeDrawer}
         size="100%"
         padding="md"
-        title="Navigation"
+        title="Navigatie"
         className={classes.hiddenDesktop}
         zIndex={1000000}
       >
         <ScrollArea h={`calc(100vh - ${rem(60)})`} mx="-md">
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
 
-          <a href="#" className={classes.link}>
+          <a href="/" className={classes.link}>
             Home
           </a>
-          <a href="#" className={classes.link}>
-            Learn
+          <a href="/about" className={classes.link}>
+            About
           </a>
-          <a href="#" className={classes.link}>
-            Academy
+          <a href="/contact" className={classes.link}>
+            Contact
           </a>
 
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
