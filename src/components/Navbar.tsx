@@ -41,6 +41,16 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'center',
   },
 
+  title: {
+    fontSize: rem(34),
+      fontWeight: 900,
+  
+      [theme.fn.smallerThan('sm')]: {
+        fontSize: rem(24),
+      },
+  },
+
+
   hiddenMobile: {
     [theme.fn.smallerThan('sm')]: {
       display: 'none',
@@ -63,7 +73,7 @@ export function Navbar() {
       <Header height={60} px="md">
         <Group position="apart" sx={{ height: '100%' }}>
           <div className={classes.headerContent}>
-            <div>Luuk Vink</div>
+            <div className={classes.title}>Luuk Vink</div>
           </div>
 
           <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
