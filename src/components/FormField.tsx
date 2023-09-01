@@ -15,6 +15,7 @@ const useStyles = createStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom: rem(-90),
   },
 
   formContainer: {

@@ -1,8 +1,6 @@
 "use client";
 import {
     createStyles,
-    Badge,
-    Group,
     Title,
     Text,
     Card,
@@ -50,7 +48,7 @@ import {
       '&::after': {
         content: '""',
         display: 'block',
-        backgroundColor: theme.fn.primaryColor(),
+        backgroundColor: "#104b84",
         width: rem(45),
         height: rem(2),
         marginTop: theme.spacing.sm,
@@ -69,7 +67,7 @@ import {
       '&::after': {
         content: '""',
         display: 'block',
-        backgroundColor: theme.fn.primaryColor(),
+        backgroundColor: "#104b84",
         width: rem(45),
         height: rem(2),
         marginTop: theme.spacing.sm,
@@ -81,7 +79,7 @@ import {
     const { classes, theme } = useStyles();
     const features = mockdata.map((feature) => (
       <Card key={feature.title} shadow="md" radius="md" className={classes.card} padding="xl">
-        <feature.icon size={rem(50)} stroke={2} color={theme.fn.primaryColor()} />
+        <feature.icon size={rem(50)} stroke={2} color="#104b84" />
         <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
           {feature.title}
         </Text>
