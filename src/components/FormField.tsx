@@ -67,7 +67,7 @@ export function FormField() {
         Vul het onderstaande formulier in om contact met mij op te nemen.
         </Text>
       <div className={classes.formContainer}>
-        <form target="_blank" action="https://formsubmit.co/Luukvink@icloud.com" method="POST">
+        <form target="_blank" action="https://formsubmit.co/9476a3a1a44a9cdb8d3b655b5db90300" method="POST">
           <label className={classes.formLabel}></label>
           <TextInput
             label="Uw naam"

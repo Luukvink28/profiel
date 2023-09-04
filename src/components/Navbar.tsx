@@ -63,6 +63,10 @@ const useStyles = createStyles((theme) => ({
       display: 'none',
     },
   },
+  forward: {
+    textDecoration: 'none',
+    color: "black"
+  },
 }));
 
 export function Navbar() {
@@ -74,7 +78,9 @@ export function Navbar() {
       <Header height={60} px="md">
         <Group position="apart" sx={{ height: '100%' }}>
           <div className={classes.headerContent}>
+            <a className={classes.forward} href="/">
             <div className={classes.title}>Luuk Vink</div>
+            </a>
           </div>
 
           <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
