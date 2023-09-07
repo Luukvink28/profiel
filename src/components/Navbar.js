@@ -83,15 +83,18 @@ export function Navbar() {
           </div>
 
           <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
-            <a href="/" className={classes.link}>
-              Home
-            </a>
-            <a href="/about" className={classes.link}>
-              About
-            </a>
-            <a href="/contact" className={classes.link}>
-              Contact
-            </a>
+          <a href="/" className={classes.link}>
+            Home
+          </a>
+          <a href="/projecten" className={classes.link}>
+            Projecten
+          </a>
+          <a href="/about" className={classes.link}>
+            About
+          </a>
+          <a href="/contact" className={classes.link}>
+            Contact
+          </a>
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
@@ -113,13 +116,15 @@ export function Navbar() {
           <a href="/" className={classes.link}>
             Home
           </a>
+          <a href="/projecten" className={classes.link}>
+            Projecten
+          </a>
           <a href="/about" className={classes.link}>
             About
           </a>
           <a href="/contact" className={classes.link}>
             Contact
           </a>
-
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
         </ScrollArea>
       </Drawer>

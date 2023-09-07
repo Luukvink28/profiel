@@ -1,8 +1,6 @@
-"use client"
+import React, { useEffect, useState } from 'react';
 import { createStyles, Text, Title, Image, rem, Button } from '@mantine/core';
 import { supabaseClient } from '../app/lib/supabaseClient';
-import React from 'react';
-
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -22,10 +20,12 @@ const useStyles = createStyles((theme) => ({
   },
 
   image: {
-    border: "2px solid Black",
-    borderRadius   : "10px",
-    padding: "2px",
+    border: '2px solid Black',
+    borderRadius: '10px',
+    padding: '2px',
     maxWidth: '50%',
+    minWidth: '50%',
+    
     [theme.fn.smallerThan('sm')]: {
       maxWidth: '100%',
     },
@@ -67,54 +67,67 @@ const useStyles = createStyles((theme) => ({
     borderTopLeftRadius: 0,
     borderBottomLeftRadius: 0,
   },
-  link:{
+
+  link: {
     textDecoration: 'none',
-    color : "white",
+    color: 'white',
   },
-  button:{
-    backgroundColor: "#104b84",
+
+  button: {
+    backgroundColor: '#104b84',
     transition: 'all 0.2s ease-in-out',
     ':hover': {
-        transition: 'all 0.2s ease-in-out',
-        backgroundColor: '#5d5d5d',
-      },
-  }
+      transition: 'all 0.2s ease-in-out',
+      backgroundColor: '#5d5d5d',
+    },
+  },
 }));
 
-
-GetProjects = async function() {
-  let {data, error} = await supabaseClient.from('projecten').select('*');
+const GetProjects = async function () {
+  let { data, error } = await supabaseClient.from('projecten').select('*');
 
   if (error) {
-    return
+    return [];
   }
 
   if (data) {
-    return data
+    return data;
   }
-}
-
+};
 
 export function Project() {
   const { classes } = useStyles();
-  let { Project } = GetProjects();
+  const [projects, setProjects] = useState([]);
 
-  console.log(Project)
+  useEffect(() => {
+    async function fetchData() {
+      const projectData = await GetProjects();
+      setProjects(projectData);
+    }
+    fetchData();
+  }, []);
+
   return (
     <div>
-      {/* {Project.map((project, key) => ( */}
-        <div className={classes.wrapper}>
+      {projects.map((project, key) => (
+        <div className={classes.wrapper} key={key}>
           <div className={classes.body}>
-            <Title className={classes.title}>{}</Title>
+            <Title className={classes.title}>{project.name}</Title>
+            <Text fw={500} color='dimmed' pr={50} fz="md" mb={20}>{project.beschrijving}</Text>
             <Button className={classes.button}>
-              <a href="https://fysiotherapie-yperlaan.vercel.app/" className={classes.link} target="_blank">
+              <a
+                href={project.url}
+                className={classes.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Bekijk website
               </a>
             </Button>
           </div>
-          <Image src="fysio.png" className={classes.image} />
+          <Image src={project.foto} className={classes.image} />
         </div>
-      {/* ))} */}
+      ))}
     </div>
   );
 }
