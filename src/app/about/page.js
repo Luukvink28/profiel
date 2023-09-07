@@ -1,9 +1,9 @@
 "use client";
-
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Project } from "@/components/Project";
 import { Title, createStyles,rem } from "@mantine/core";
+import {supabaseClient} from "../lib/supabaseClient";
 const useStyles = createStyles((theme) => ({
 
 title: {

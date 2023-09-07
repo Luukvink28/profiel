@@ -18,7 +18,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   imageWrapper: {
-    flex: '1', 
+    flex: '1',
     display: 'flex',
     justifyContent: 'flex-end',
     maxWidth: "100%",
@@ -29,9 +29,8 @@ const useStyles = createStyles((theme) => ({
   image: {
     maxWidth: "40%",
 
-
     [theme.fn.smallerThan('md')]: {
-      maxWidth: '100%', 
+      maxWidth: '100%',
     },
   },
 

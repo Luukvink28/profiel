@@ -44,13 +44,12 @@ const useStyles = createStyles((theme) => ({
 
   title: {
     fontSize: rem(34),
-      fontWeight: 900,
-  
-      [theme.fn.smallerThan('sm')]: {
-        fontSize: rem(24),
-      },
-  },
+    fontWeight: 900,
 
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: rem(24),
+    },
+  },
 
   hiddenMobile: {
     [theme.fn.smallerThan('sm')]: {
@@ -65,7 +64,7 @@ const useStyles = createStyles((theme) => ({
   },
   forward: {
     textDecoration: 'none',
-    color: "black"
+    color: 'black',
   },
 }));
 
@@ -79,7 +78,7 @@ export function Navbar() {
         <Group position="apart" sx={{ height: '100%' }}>
           <div className={classes.headerContent}>
             <a className={classes.forward} href="/">
-            <div className={classes.title}>Luuk Vink</div>
+              <div className={classes.title}>Luuk Vink</div>
             </a>
           </div>
 
@@ -122,7 +121,6 @@ export function Navbar() {
           </a>
 
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
-
         </ScrollArea>
       </Drawer>
     </Box>

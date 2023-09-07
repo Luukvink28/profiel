@@ -38,17 +38,17 @@ export function Footer() {
         <Group spacing={0} className={classes.links} position="right" noWrap>
           <ActionIcon size="lg">
             <Link href="https://twitter.com/Luuk421" style={{ textDecoration: 'none' }}>
-            <IconBrandTwitter color='black' size="1.05rem" stroke={1.5} />
+              <IconBrandTwitter color='black' size="1.05rem" stroke={1.5} />
             </Link>
           </ActionIcon>
           <ActionIcon size="lg">
             <Link href="https://www.youtube.com/channel/UC9wltPLhLxAxYVRqvm1rMmA" style={{ textDecoration: 'none' }}>
-            <IconBrandYoutube color='black' size="1.05rem" stroke={1.5} />
+              <IconBrandYoutube color='black' size="1.05rem" stroke={1.5} />
             </Link>
           </ActionIcon>
           <ActionIcon size="lg">
             <Link href='https://www.instagram.com/luuk._vk/' style={{ textDecoration: 'none' }}>
-            <IconBrandInstagram color='black'  size="1.05rem" stroke={1.5} />
+              <IconBrandInstagram color='black'  size="1.05rem" stroke={1.5} />
             </Link>
           </ActionIcon>
         </Group>

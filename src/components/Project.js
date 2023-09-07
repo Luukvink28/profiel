@@ -1,5 +1,7 @@
 "use client"
 import { createStyles, Text, Title, Image, rem, Button } from '@mantine/core';
+import { supabaseClient } from '../app/lib/supabaseClient';
+import React from 'react';
 
 
 const useStyles = createStyles((theme) => ({
@@ -79,18 +81,40 @@ const useStyles = createStyles((theme) => ({
   }
 }));
 
+
+GetProjects = async function() {
+  let {data, error} = await supabaseClient.from('projecten').select('*');
+
+  if (error) {
+    return
+  }
+
+  if (data) {
+    return data
+  }
+}
+
+
 export function Project() {
   const { classes } = useStyles();
-  return (
-    <div className={classes.wrapper}>
-      <div className={classes.body}>
-        <Title className={classes.title}>Fysiotherapie Yperlaan</Title>
-        <Button className={classes.button}>
-            <a href="https://fysiotherapie-yperlaan.vercel.app/" className={classes.link} target="_blank">Bekijk website </a>
-        </Button>
+  let { Project } = GetProjects();
 
-      </div>
-      <Image src="fysio.png"  className={classes.image} />
+  console.log(Project)
+  return (
+    <div>
+      {/* {Project.map((project, key) => ( */}
+        <div className={classes.wrapper}>
+          <div className={classes.body}>
+            <Title className={classes.title}>{}</Title>
+            <Button className={classes.button}>
+              <a href="https://fysiotherapie-yperlaan.vercel.app/" className={classes.link} target="_blank">
+                Bekijk website
+              </a>
+            </Button>
+          </div>
+          <Image src="fysio.png" className={classes.image} />
+        </div>
+      {/* ))} */}
     </div>
   );
 }
