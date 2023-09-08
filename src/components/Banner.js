@@ -79,7 +79,7 @@ export function Banner() {
       <div className={classes.body}>
         <Title className={classes.title}>Luuk Vink</Title>
         <Text fw={500} pr={50} fz="lg" mb={5}>
-          Student Grafish Lyceum Rotterdam - Software Developer
+          Student - Software Developer
         </Text>
       </div>
       <div className={classes.imageWrapper}>

@@ -1,9 +1,13 @@
 "use client";
-import { Container, Grid, SimpleGrid, Skeleton, useMantineTheme, rem, createStyles  } from '@mantine/core';
+import { Container, Grid, SimpleGrid, Skeleton, useMantineTheme, rem, createStyles, Text  } from '@mantine/core';
 
 const PRIMARY_COL_HEIGHT = rem(400);
 
 const useStyles = createStyles((theme) => ({
+    
+Container: {
+    width: "100%",
+},
 
 
 }));
@@ -20,10 +24,7 @@ export function Grid() {
           <Grid.Col>
             <Skeleton height={SECONDARY_COL_HEIGHT} radius="md" animate={false} />
           </Grid.Col>
-          <Grid.Col span={6}>
-            <Skeleton height={SECONDARY_COL_HEIGHT} radius="md" animate={false} />
-          </Grid.Col>
-          <Grid.Col span={6}>
+          <Grid.Col >
             <Skeleton height={SECONDARY_COL_HEIGHT} radius="md" animate={false} />
           </Grid.Col>
         </Grid>
