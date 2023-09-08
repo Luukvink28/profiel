@@ -89,8 +89,8 @@ export function Navbar() {
           <a href="/projecten" className={classes.link}>
             Projecten
           </a>
-          <a href="/about" className={classes.link}>
-            About
+          <a href="/over" className={classes.link}>
+            Over mij
           </a>
           <a href="/contact" className={classes.link}>
             Contact
@@ -119,8 +119,8 @@ export function Navbar() {
           <a href="/projecten" className={classes.link}>
             Projecten
           </a>
-          <a href="/about" className={classes.link}>
-            About
+          <a href="/over" className={classes.link}>
+            Over mij
           </a>
           <a href="/contact" className={classes.link}>
             Contact

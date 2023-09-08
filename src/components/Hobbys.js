@@ -8,7 +8,7 @@ import {
     Container,
     rem,
 } from '@mantine/core';
-import { IconBallBasketball, IconCamera, IconDeviceGamepad2 } from '@tabler/icons-react';
+import { IconBallBasketball, IconCamera, IconCode } from '@tabler/icons-react';
 
 const mockdata = [
     {
@@ -22,9 +22,9 @@ const mockdata = [
         icon: IconCamera,
     },
     {
-        title: 'Gaming',
+        title: 'Programmeren',
         description: 'Gamen is mijn hobby. Ik geniet van spannende avonturen in virtuele werelden en deel de vreugde van het spel en mijn game-passie met anderen.',
-        icon: IconDeviceGamepad2,
+        icon: IconCode,
     },
 ];
 

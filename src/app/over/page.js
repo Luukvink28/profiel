@@ -1,8 +1,12 @@
 "use client";
+
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Project } from "@/components/Project";
-import { Title, createStyles,rem } from "@mantine/core";
+import { Vragen } from "@/components/Vragen";
+import { Grid } from "@/components/Grid";
+import { createStyles, Title } from '@mantine/core';
+
+
 const useStyles = createStyles((theme) => ({
 
   title: {
@@ -11,23 +15,20 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     marginBottom: `calc(${theme.spacing.xl} * 0,5)`,
   },
-
-
-
 }));
 
 
 
-
-
-export default function Projecten() {
+export default function Over() {
   const { classes } = useStyles();
-
   return (
     <>
     <Navbar/>
-    <Title className={classes.title} mb={20} align="center" >Projecten</Title>
-    <Project/>
+    <Title align="center" className={classes.title}>
+              Over mij
+            </Title>
+    <Grid/>
+    <Vragen/>
     <Footer/>
     </>
   )

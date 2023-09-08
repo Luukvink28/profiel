@@ -6,10 +6,6 @@ import { Hobbys } from "@/components/Hobbys";
 import { Footer } from "@/components/Footer";
 
 
-
-
-
-
 export default function Home() {
 
   return (
