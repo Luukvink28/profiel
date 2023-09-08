@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Project.js", "src/components/Project.js", "src/components/Navbar.js", "src/components/Hobbys.js", "src/components/FormField.js", "src/components/Footer.js", "src/components/Banner.js", "src/app/contact/layout.js", "src/app/contact/page.js", "src/app/page.js", "src/app/layout.js", "src/app/about/page.js", "src/app/about/layout.js", "utils/supabaseClient.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Project.js", "src/components/Project.js", "src/components/Navbar.js", "src/components/Hobbys.js", "src/components/FormField.js", "src/components/Footer.js", "src/components/Banner.js", "src/app/contact/layout.js", "src/app/contact/page.js", "src/app/page.js", "src/app/layout.js", "src/app/over/page.js", "src/app/over/layout.js", "utils/supabaseClient.js"],
   "exclude": ["node_modules"]
 }
