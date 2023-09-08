@@ -12,12 +12,13 @@ import {
   
   const useStyles = createStyles((theme) => ({
     wrapper: {
-      paddingTop: `calc(${theme.spacing.xl} * 2)`,
-      minHeight: rem(420),
+      paddingTop: `calc(${theme.spacing.xl} * 3)`,
+      minHeight: rem(320),
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'top left',
       position: 'relative',
       color: theme.black,
+      marginBottom: '-60px',
     },
 
     item: {
