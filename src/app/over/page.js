@@ -3,7 +3,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Vragen } from "@/components/Vragen";
-import { Grid } from "@/components/Grid";
+import { OverGrid } from "@/components/OverGrid";
 import { createStyles, Title } from '@mantine/core';
 
 
@@ -27,7 +27,7 @@ export default function Over() {
     <Title align="center" className={classes.title}>
               Over mij
             </Title>
-    <Grid/>
+    <OverGrid/>
     <Vragen/>
     <Footer/>
     </>
