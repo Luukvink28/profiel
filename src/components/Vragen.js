@@ -71,15 +71,15 @@ import {
     },
   }));
   
-  const antwoord1 = "toekomst";
+  const antwoord1 = "Ik zou graag, in goede gezondheid, volledig zelfredzaam willen worden. M'n zaakjes goed op orde; een leuke en uitdagende baan met mooie benefits ;), een lekker woning en een fijne groep mensen om mij heen. Belangrijk is wel dat ik wel 'gevoed' moet blijven worden. Gevoed als in dat de dingen voor mij niet saai moeten worden, maar ik er door uitgedaagd blijf worden, zeker op werkgebied.";
 
-  const antwoord2 = "toekomst";
+  const antwoord2 = "Ik heb verschillende inspiratiebronnen. Ik kan geinspireerd raken door kleine dagelijkse dingen zoals bijvoorbeeld een goede kop koffie of een lekker nummer. Op school word ik getriggerd door de lesstof. Het steeds meer te weten komen over een bepaald onderwerp, dus je steeds meer verdiepen in de materie om zo te ontdekken wat de samenhang is, het proces te snappen. Rode draad in de dingen die mij inspireren is verdieping: precies leren hoe alles werkt en hoe de dingen functioneren.";
 
-  const antwoord3 = "toekomst";
+  const antwoord3 = "Ik wil graag na mijn stage aan het werk en het liefts bij het bedrijf waar ik stage heb gelopen. en ook tegelijkertijd een hbo studie doen.";
 
-  const antwoord4 = "toekomst";
+  const antwoord4 = "Ik denk dat ik een rustige student ben. en daarom fijn om mee samen te werken.";
   
-  const antwoord5 = "toekomst";
+  const antwoord5 = "Ik denk dat  ik een beetje in het midden sta. Ik ben niet de leider, maar ook niet de volger. Ik ben wel iemand die graag de touwtjes in handen heeft.";
 
   export function Vragen() {
     const { classes } = useStyles();

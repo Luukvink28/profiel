@@ -13,17 +13,17 @@ import { IconBallBasketball, IconCamera, IconCode } from '@tabler/icons-react';
 const mockdata = [
     {
         title: 'Basketball',
-        description: 'Basketballen',
+        description: 'Ik basketbal graag dat is een van mijn grootste hobbys waar ik graag tijd aan besteed.',
         icon: IconBallBasketball,
     },
     {
         title: 'Fotografie',
-        description: 'Basketbalfotografie is mijn hobby. Ik jaag op de meest dynamische momenten, gevangen in licht en schaduw. Zo breng ik de energie van het spel tot leven en deel ik mijn passie voor basketbal.',
+        description: 'Fotos maken doe ik ook graag. Vooral in de zaal van de basketbal wedstrijden. Ik heb een eigen camera en maak graag fotos.',
         icon: IconCamera,
     },
     {
         title: 'Programmeren',
-        description: 'Gamen is mijn hobby. Ik geniet van spannende avonturen in virtuele werelden en deel de vreugde van het spel en mijn game-passie met anderen.',
+        description: 'Programmeren doe ik ook graag natuurlijk. ik doe daarom ook de opleiding software developer op het Grafish Lyceum Rotterdam. ik zit nu in mijn tweede jaar en heb het erg naar mijn zin.',
         icon: IconCode,
     },
 ];
