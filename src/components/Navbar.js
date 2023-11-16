@@ -23,6 +23,7 @@ const useStyles = createStyles((theme) => ({
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     fontWeight: 500,
     fontstyle: 'arial',
+    fontFamily: 'arial',
     fontSize: theme.fontSizes.sm,
 
     [theme.fn.smallerThan('sm')]: {
@@ -61,6 +62,7 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.largerThan('sm')]: {
       display: 'none',
     },
+    fontFamily: 'arial',
   },
   forward: {
     textDecoration: 'none',
