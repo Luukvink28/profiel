@@ -22,10 +22,12 @@ const useStyles = createStyles((theme) => ({
 
   image: {
     border: '2px solid Black',
-    borderRadius: '10px',
+    borderRadius: '5px',
     padding: '2px',
     maxWidth: '50%',
     minWidth: '50%',
+  
+    marginRight: '5%',
     
     [theme.fn.smallerThan('sm')]: {
       maxWidth: '100%',
