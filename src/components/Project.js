@@ -124,7 +124,7 @@ export function Project() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Bekijk website
+                {project.button}
               </a>
             </Button>
           </div>

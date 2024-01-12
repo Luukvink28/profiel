@@ -1,6 +1,6 @@
 export const metadata = {
-    title: 'Portfolio',
-    description: 'Portfolio',
+    title: 'Luuk Vink',
+    description: 'Portfolio van Luuk Vink',
   };
   
   export default function RootLayout({ children }) {
