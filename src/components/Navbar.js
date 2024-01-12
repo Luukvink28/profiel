@@ -12,6 +12,8 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
+import Link from 'next/link';
+
 const useStyles = createStyles((theme) => ({
   link: {
     display: 'flex',
@@ -79,24 +81,24 @@ export function Navbar() {
       <Header height={60} px="md">
         <Group position="apart" sx={{ height: '100%' }}>
           <div className={classes.headerContent}>
-            <a className={classes.forward} href="/">
+            <Link className={classes.forward} href="/">
               <div className={classes.title}>Luuk Vink</div>
-            </a>
+            </Link>
           </div>
 
           <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
-          <a href="/" className={classes.link}>
+          <Link href="/" className={classes.link}>
             Home
-          </a>
-          <a href="/projecten" className={classes.link}>
+          </Link>
+          <Link href="/projecten" className={classes.link}>
             Projecten
-          </a>
-          <a href="/over" className={classes.link}>
+          </Link>
+          <Link href="/over" className={classes.link}>
             Over mij
-          </a>
-          <a href="/contact" className={classes.link}>
+          </Link>
+          <Link href="/contact" className={classes.link}>
             Contact
-          </a>
+          </Link>
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
@@ -115,18 +117,18 @@ export function Navbar() {
         <ScrollArea h={`calc(100vh - ${rem(60)})`} mx="-md">
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
 
-          <a href="/" className={classes.link}>
+          <Link href="/" className={classes.link}>
             Home
-          </a>
-          <a href="/projecten" className={classes.link}>
+          </Link>
+          <Link href="/projecten" className={classes.link}>
             Projecten
-          </a>
-          <a href="/over" className={classes.link}>
+          </Link>
+          <Link href="/over" className={classes.link}>
             Over mij
-          </a>
-          <a href="/contact" className={classes.link}>
+          </Link>
+          <Link href="/contact" className={classes.link}>
             Contact
-          </a>
+          </Link>
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
         </ScrollArea>
       </Drawer>
