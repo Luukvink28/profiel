@@ -4,6 +4,7 @@ import { supabaseClient } from '../app/lib/supabaseClient';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
+    marginTop: '5px',
     display: 'flex',
     alignItems: 'center',
     padding: `calc(${theme.spacing.md} * 2)`,
