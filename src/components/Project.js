@@ -26,16 +26,11 @@ const useStyles = createStyles((theme) => ({
     padding: '2px',
     maxWidth: '50%',
     minWidth: '50%',
-  
-    marginRight: '5%',
-    
-    [theme.fn.smallerThan('sm')]: {
-      maxWidth: '100%',
-    },
   },
 
   body: {
-    paddingRight: `calc(${theme.spacing.xl} * 12)`,
+    width: '30rem',
+    marginRight: '30%',
 
     [theme.fn.smallerThan('sm')]: {
       paddingRight: 0,
