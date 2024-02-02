@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { createStyles, Text, Title, Image, rem, Button } from '@mantine/core';
+import { createStyles, Text, Title, Image, rem, Button, MediaQuery } from '@mantine/core';
 import { supabaseClient } from '../app/lib/supabaseClient';
 
 const useStyles = createStyles((theme) => ({
@@ -30,7 +30,7 @@ const useStyles = createStyles((theme) => ({
 
   body: {
     width: '30rem',
-    marginRight: '30%',
+    marginRight: '15%',
 
     [theme.fn.smallerThan('sm')]: {
       paddingRight: 0,
@@ -69,6 +69,10 @@ const useStyles = createStyles((theme) => ({
   link: {
     textDecoration: 'none',
     color: 'white',
+  },
+
+  beschrijving:{
+    width: '30rem',
   },
 
   button: {
@@ -110,8 +114,18 @@ export function Project() {
       {projects.map((project, key) => (
         <div className={classes.wrapper} key={key}>
           <div className={classes.body}>
+          <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '17%'}}>
+
             <Title className={classes.title}>{project.name}</Title>
-            <Text fw={500} color='dimmed' pr={50} fz="md" mb={20}>{project.beschrijving}</Text>
+
+          </MediaQuery>
+          <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '18%', maxWidth: '75%'}}>
+
+            <Text className={classes.beschrijving} fw={500} color='dimmed' pr={50} fz="md" mb={20}>{project.beschrijving}</Text>
+
+            </MediaQuery>
+            <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '19%'}}>
+
             <Button className={classes.button}>
               <a
                 href={project.url}
@@ -122,8 +136,15 @@ export function Project() {
                 {project.button}
               </a>
             </Button>
+
+            </MediaQuery>
           </div>
+          <MediaQuery 
+          query="(max-width: 600px)"
+          styles={{maxWidth: '100%', minWidth: '100%'}}
+          >
           <Image src={project.foto} className={classes.image} />
+          </MediaQuery>
         </div>
       ))}
     </div>
