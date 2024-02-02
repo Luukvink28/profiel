@@ -119,7 +119,7 @@ export function Project() {
             <Title className={classes.title}>{project.name}</Title>
 
           </MediaQuery>
-          <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '16%', maxWidth: '75%'}}>
+          <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '16%', maxWidth: '80%'}}>
 
             <Text className={classes.beschrijving} fw={500} color='dimmed' pr={50} fz="md" mb={20}>{project.beschrijving}</Text>
 
