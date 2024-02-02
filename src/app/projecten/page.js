@@ -2,7 +2,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Project } from "@/components/Project";
-import { Title, createStyles,rem } from "@mantine/core";
 const useStyles = createStyles((theme) => ({
 
   title: {
