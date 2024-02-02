@@ -114,17 +114,17 @@ export function Project() {
       {projects.map((project, key) => (
         <div className={classes.wrapper} key={key}>
           <div className={classes.body}>
-          <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '17%'}}>
+          <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '15%'}}>
 
             <Title className={classes.title}>{project.name}</Title>
 
           </MediaQuery>
-          <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '18%', maxWidth: '75%'}}>
+          <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '16%', maxWidth: '75%'}}>
 
             <Text className={classes.beschrijving} fw={500} color='dimmed' pr={50} fz="md" mb={20}>{project.beschrijving}</Text>
 
             </MediaQuery>
-            <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '19%'}}>
+            <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '17%'}}>
 
             <Button className={classes.button}>
               <a
