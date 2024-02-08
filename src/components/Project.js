@@ -24,13 +24,15 @@ const useStyles = createStyles((theme) => ({
     border: '2px solid Black',
     borderRadius: '5px',
     padding: '2px',
-    maxWidth: '50%',
-    minWidth: '50%',
+    maxWidth: '100%',
+    minWidth: '200px',
+    height: 'auto',
+    position: 'relative',
   },
 
   body: {
     width: '30rem',
-    marginRight: '15%',
+    marginRight: '19%',
 
     [theme.fn.smallerThan('sm')]: {
       paddingRight: 0,
@@ -71,7 +73,7 @@ const useStyles = createStyles((theme) => ({
     color: 'white',
   },
 
-  beschrijving:{
+  beschrijving: {
     width: '30rem',
   },
 
@@ -114,36 +116,36 @@ export function Project() {
       {projects.map((project, key) => (
         <div className={classes.wrapper} key={key}>
           <div className={classes.body}>
-          <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '15%'}}>
+            <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '15%' }}>
 
-            <Title className={classes.title}>{project.name}</Title>
-
-          </MediaQuery>
-          <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '16%', maxWidth: '80%', padding: 0}}>
-
-            <Text className={classes.beschrijving} fw={500} color='dimmed' pr={50} fz="md" mb={20}>{project.beschrijving}</Text>
+              <Title className={classes.title}>{project.name}</Title>
 
             </MediaQuery>
-            <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '17%'}}>
+            <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '16%', maxWidth: '80%', padding: 0 }}>
 
-            <Button className={classes.button}>
-              <a
-                href={project.url}
-                className={classes.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {project.button}
-              </a>
-            </Button>
+              <Text className={classes.beschrijving} fw={500} color='dimmed' pr={50} fz="md" mb={20}>{project.beschrijving}</Text>
+
+            </MediaQuery>
+            <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '17%' }}>
+
+              <Button className={classes.button}>
+                <a
+                  href={project.url}
+                  className={classes.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {project.button}
+                </a>
+              </Button>
 
             </MediaQuery>
           </div>
-          <MediaQuery 
-          query="(max-width: 600px)"
-          styles={{maxWidth: '100%', minWidth: '100%'}}
+          <MediaQuery
+            query="(max-width: 600px)"
+            styles={{ maxWidth: '100%', minWidth: '100%' }}
           >
-          <Image src={project.foto} className={classes.image} />
+            <Image src={project.foto} className={classes.image} />
           </MediaQuery>
         </div>
       ))}
