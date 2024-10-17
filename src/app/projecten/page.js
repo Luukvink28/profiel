@@ -15,7 +15,7 @@ const useStyles = createStyles((theme) => ({
 
 const projectData = [
   {
-    name: 'fysio Yperlaan',
+    name: 'Fysio Yperlaan',
     description: 'Ik heb deze website gemaakt met react in het framework next.js. het is in opdracht gebouwd voor een fysiotherapie yperlaan..',
     image: 'fysio.png',
     url: 'https://fysiotherapie-yperlaan.vercel.app/',
