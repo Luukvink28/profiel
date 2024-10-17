@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { createStyles, Text, Title, Image, rem, Button, MediaQuery } from '@mantine/core';
-import { supabaseClient } from '../app/lib/supabaseClient';
+"use client";
+import { createStyles, Text, Title, Button, Image, MediaQuery } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -10,7 +9,7 @@ const useStyles = createStyles((theme) => ({
     padding: `calc(${theme.spacing.md} * 2)`,
     borderRadius: theme.radius.md,
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-    border: `${rem(1)} solid ${
+    border: `1px solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]
     }`,
 
@@ -47,32 +46,6 @@ const useStyles = createStyles((theme) => ({
     marginBottom: theme.spacing.md,
   },
 
-  controls: {
-    display: 'flex',
-    marginTop: theme.spacing.xl,
-  },
-
-  inputWrapper: {
-    width: '100%',
-    flex: '1',
-  },
-
-  input: {
-    borderTopRightRadius: 0,
-    borderBottomRightRadius: 0,
-    borderRight: 0,
-  },
-
-  control: {
-    borderTopLeftRadius: 0,
-    borderBottomLeftRadius: 0,
-  },
-
-  link: {
-    textDecoration: 'none',
-    color: 'white',
-  },
-
   beschrijving: {
     width: '30rem',
   },
@@ -85,31 +58,19 @@ const useStyles = createStyles((theme) => ({
       backgroundColor: '#5d5d5d',
     },
   },
+
+  link: {
+    color: 'white',
+    textDecoration: 'none',
+  }
 }));
 
-const GetProjects = async function () {
-  let { data, error } = await supabaseClient.from('projecten').select('*');
-
-  if (error) {
-    return [];
-  }
-
-  if (data) {
-    return data;
-  }
-};
-
-export function Project() {
+export function Project({ projects }) {
   const { classes } = useStyles();
-  const [projects, setProjects] = useState([]);
 
-  useEffect(() => {
-    async function fetchData() {
-      const projectData = await GetProjects();
-      setProjects(projectData);
-    }
-    fetchData();
-  }, []);
+  if (!projects || projects.length === 0) {
+    return <Text>No projects available</Text>;
+  }
 
   return (
     <div>
@@ -117,17 +78,16 @@ export function Project() {
         <div className={classes.wrapper} key={key}>
           <div className={classes.body}>
             <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '15%' }}>
-
               <Title className={classes.title}>{project.name}</Title>
-
             </MediaQuery>
+
             <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '16%', maxWidth: '80%', padding: 0 }}>
-
-              <Text className={classes.beschrijving} fw={500} color='dimmed' pr={50} fz="md" mb={20}>{project.beschrijving}</Text>
-
+              <Text className={classes.beschrijving} fw={500} color="dimmed" pr={50} fz="md" mb={20}>
+                {project.description}
+              </Text>
             </MediaQuery>
-            <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '17%' }}>
 
+            <MediaQuery query="(max-width: 600px)" styles={{ marginLeft: '17%' }}>
               <Button className={classes.button}>
                 <a
                   href={project.url}
@@ -135,17 +95,14 @@ export function Project() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {project.button}
+                  {project.buttonText}
                 </a>
               </Button>
-
             </MediaQuery>
           </div>
-          <MediaQuery
-            query="(max-width: 600px)"
-            styles={{ maxWidth: '100%', minWidth: '100%' }}
-          >
-            <Image src={project.foto} className={classes.image} />
+
+          <MediaQuery query="(max-width: 600px)" styles={{ maxWidth: '100%', minWidth: '100%' }}>
+            <Image src={project.image} className={classes.image} />
           </MediaQuery>
         </div>
       ))}
