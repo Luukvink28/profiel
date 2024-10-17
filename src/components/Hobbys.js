@@ -23,7 +23,7 @@ const mockdata = [
     },
     {
         title: 'Programmeren',
-        description: 'Programmeren doe ik ook graag natuurlijk. ik doe daarom ook de opleiding software developer op het Grafish Lyceum Rotterdam. ik zit nu in mijn tweede jaar en heb het erg naar mijn zin.',
+        description: 'Programmeren doe ik ook graag natuurlijk. ik doe daarom ook de opleiding software developer op het Grafish Lyceum Rotterdam. ik zit nu in mijn derde jaar en heb het erg naar mijn zin.',
         icon: IconCode,
     },
 ];

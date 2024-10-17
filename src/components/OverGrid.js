@@ -32,7 +32,7 @@ export function OverGrid() {
             height: rem(180),
             })}>
               <Text>
-                Ik ben Luuk Vink ik ben 16 jaar oud en ik studeer software developer op het Grafish Lyceum Rotterdam. Daarnaast basketbal ik ook erg graag en dat doe ik al 4 jaar bij de club Lokomotief in Rijswijk.
+                Ik ben Luuk Vink ik ben 17 jaar oud en ik studeer software developer op het Grafish Lyceum Rotterdam. Daarnaast basketbal ik ook erg graag en dat doe ik al 4 jaar bij de club Lokomotief in Rijswijk.
               </Text>
           </Box>
           </Grid.Col>
